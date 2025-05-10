@@ -224,18 +224,3 @@ services:
       working-directory: scripts/juniper-junos-ospf-status
       repository: autocon3-content
       decorator: juniper-junos-ospf-status-decorator
-registries:
-    - name: default-galaxy
-      type: ansible-galaxy
-      url: https://galaxy.ansible.com
-      default: true
-      description: The default public Ansible Galaxy registry entered into the database if no other default exists
-    - name: default-pypi
-      type: pypi
-      url: https://pypi.org/simple
-      default: true
-      description: The default public PyPi registry entered into the database if no other default exists
-secrets: []
-users:
-    - name: admin
-      password: $2a$10$newDKtaM7/9zQAvoT81yE.H2jhjmQBxGA4ul2JiqicvhgrrSCKg0S
