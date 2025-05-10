@@ -1,0 +1,16 @@
+{
+  "$id": "root",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "hostname": {
+      "type": "string",
+      "description": "The hostname to check for DNS record existence",
+      "format": "hostname"
+    }
+  },
+  "required": [
+    "hostname"
+  ],
+  "additionalProperties": false
+}

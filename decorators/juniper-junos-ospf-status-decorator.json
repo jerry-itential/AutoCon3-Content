@@ -1,0 +1,44 @@
+{
+  "$id": "root",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "host": {
+      "type": "string",
+      "description": "Juniper JUNOS device hostname or IP address",
+      "format": "hostname"
+    },
+    "username": {
+      "type": "string",
+      "description": "NETCONF username for authentication"
+    },
+    "password": {
+      "type": "string",
+      "description": "NETCONF password for authentication",
+      "format": "password"
+    },
+    "port": {
+      "type": "integer",
+      "description": "NETCONF port number (default: 830)",
+      "default": 830,
+      "minimum": 1,
+      "maximum": 65535
+    },
+    "instance": {
+      "type": "string",
+      "description": "OSPF routing-instance name (default: master)",
+      "default": "master"
+    },
+    "area": {
+      "type": "string",
+      "description": "Specific OSPF area to check (optional)",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+$"
+    }
+  },
+  "required": [
+    "host",
+    "username",
+    "password"
+  ],
+  "additionalProperties": false
+}

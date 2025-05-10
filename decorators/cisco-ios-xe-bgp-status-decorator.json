@@ -1,0 +1,31 @@
+{
+  "$id": "root",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "host": {
+      "type": "string",
+      "description": "Cisco IOS-XE device hostname or IP address",
+      "format": "hostname"
+    },
+    "username": {
+      "type": "string",
+      "description": "SSH username for authentication"
+    },
+    "password": {
+      "type": "string",
+      "description": "SSH password for authentication",
+      "format": "password"
+    },
+    "neighbor": {
+      "type": "string",
+      "description": "Specific BGP neighbor IP to check (optional)"
+    }
+  },
+  "required": [
+    "host",
+    "username",
+    "password"
+  ],
+  "additionalProperties": false
+}

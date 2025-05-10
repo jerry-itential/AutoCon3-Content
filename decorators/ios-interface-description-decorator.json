@@ -1,0 +1,28 @@
+{
+  "$id": "root",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "deviceName": {
+      "type": "string"
+    },
+    "interface": {
+      "type": "string",
+      "description": "Full interface identifier (e.g., GigabitEthernet1)",
+      "pattern": "^(Ethernet|FastEthernet|GigabitEthernet)\\d+$"
+    },
+    "subinterface": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "deviceName",
+    "interface",
+    "subinterface",
+    "description"
+  ],
+  "additionalProperties": false
+}

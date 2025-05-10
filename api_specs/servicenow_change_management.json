@@ -1,0 +1,1072 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ServiceNow Change Management API",
+    "description": "ServiceNow Change Management API",
+    "version": "latest"
+  },
+  "externalDocs": {
+    "url": ""
+  },
+  "servers": [
+    {
+      "url": "https://example.service-now.com:443"
+    }
+  ],
+  "security": [
+    {
+      "Basic": []
+    }
+  ],
+  "paths": {
+    "/api/sn_chg_rest/change": {
+      "get": {
+        "operationId": "getChanges",
+        "description": "Retrieve all change requests",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createChange",
+        "description": "Create a new change request",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/ci/{cmdb_ci_sys_id}/schedule": {
+      "get": {
+        "operationId": "getCiSchedule",
+        "description": "Get configuration item schedule",
+        "parameters": [
+          {
+            "name": "cmdb_ci_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/emergency": {
+      "get": {
+        "operationId": "getEmergencyChanges",
+        "description": "Retrieve all emergency changes",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createEmergencyChange",
+        "description": "Create a new emergency change",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/emergency/{sys_id}": {
+      "get": {
+        "operationId": "getEmergencyChangeById",
+        "description": "Retrieve specific emergency change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteEmergencyChange",
+        "description": "Remove an emergency change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "updateEmergencyChange",
+        "description": "Modify an emergency change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/model": {
+      "get": {
+        "operationId": "getChangeModels",
+        "description": "Retrieve all change models",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/model/{sys_id}": {
+      "get": {
+        "operationId": "getChangeModelById",
+        "description": "Retrieve specific change model",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/normal": {
+      "get": {
+        "operationId": "getNormalChanges",
+        "description": "Retrieve all normal changes",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createNormalChange",
+        "description": "Create a new normal change",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/normal/{sys_id}": {
+      "get": {
+        "operationId": "getNormalChangeById",
+        "description": "Retrieve specific normal change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteNormalChange",
+        "description": "Remove a normal change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "updateNormalChange",
+        "description": "Modify a normal change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/standard": {
+      "get": {
+        "operationId": "getStandardChanges",
+        "description": "Retrieve all standard changes",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/standard/template": {
+      "get": {
+        "operationId": "getStandardChangeTemplates",
+        "description": "Retrieve all standard change templates",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/standard/template/{sys_id}": {
+      "get": {
+        "operationId": "getStandardChangeTemplateById",
+        "description": "Retrieve specific change template",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/standard/{sys_id}": {
+      "get": {
+        "operationId": "getStandardChangeById",
+        "description": "Retrieve specific standard change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteStandardChange",
+        "description": "Remove a standard change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "updateStandardChange",
+        "description": "Modify a standard change",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/standard/{standard_change_template_id}": {
+      "post": {
+        "operationId": "createStandardChangeFromTemplate",
+        "description": "Create change from template",
+        "parameters": [
+          {
+            "name": "standard_change_template_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/worker/{sys_id}": {
+      "get": {
+        "operationId": "getChangeWorkerById",
+        "description": "Retrieve specific change worker",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{sys_id}": {
+      "get": {
+        "operationId": "getChangeById",
+        "description": "Retrieve specific change request",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteChange",
+        "description": "Remove a change request",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "updateChange",
+        "description": "Modify a change request",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{sys_id}/approvals": {
+      "patch": {
+        "operationId": "updateChangeApprovals",
+        "description": "Update change approval status",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{change_sys_id}/ci": {
+      "get": {
+        "operationId": "getChangeCIs",
+        "description": "Retrieve change configuration items",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "addChangeCI",
+        "description": "Add configuration item to change",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{sys_id}/conflict": {
+      "get": {
+        "operationId": "getChangeConflicts",
+        "description": "Retrieve change conflicts",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createChangeConflict",
+        "description": "Create a change conflict",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteChangeConflict",
+        "description": "Remove a change conflict",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{change_sys_id}/nextstates": {
+      "get": {
+        "operationId": "getChangeNextStates",
+        "description": "Retrieve available state transitions",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{change_sys_id}/refresh_impacted_services": {
+      "post": {
+        "operationId": "refreshChangeImpactedServices",
+        "description": "Update impacted services list",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{sys_id}/risk": {
+      "patch": {
+        "operationId": "updateChangeRisk",
+        "description": "Modify change risk assessment",
+        "parameters": [
+          {
+            "name": "sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{change_sys_id}/schedule": {
+      "get": {
+        "operationId": "getChangeSchedule",
+        "description": "Retrieve change schedule details",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{change_sys_id}/schedule/first_available": {
+      "patch": {
+        "operationId": "updateChangeScheduleFirstAvailable",
+        "description": "Set first available schedule slot",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{change_sys_id}/task": {
+      "get": {
+        "operationId": "getChangeTasks",
+        "description": "Retrieve change tasks",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createChangeTask",
+        "description": "Create a new change task",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/sn_chg_rest/change/{change_sys_id}/task/{task_sys_id}": {
+      "get": {
+        "operationId": "getChangeTaskById",
+        "description": "Retrieve specific change task",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "task_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteChangeTask",
+        "description": "Remove a change task",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "task_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "updateChangeTask",
+        "description": "Modify a change task",
+        "parameters": [
+          {
+            "name": "change_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "task_sys_id",
+            "in": "path",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "application/xml": {},
+            "text/xml": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {},
+              "application/xml": {},
+              "text/xml": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Basic": {
+        "scheme": "basic",
+        "type": "http"
+      }
+    }
+  }
+}

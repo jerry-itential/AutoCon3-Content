@@ -1,0 +1,47 @@
+{
+  "$id": "root",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "host": {
+      "type": "string",
+      "description": "Arista EOS switch hostname or IP address",
+      "format": "hostname"
+    },
+    "username": {
+      "type": "string",
+      "description": "eAPI username for authentication"
+    },
+    "password": {
+      "type": "string",
+      "description": "eAPI password for authentication",
+      "format": "password"
+    },
+    "transport": {
+      "type": "string",
+      "description": "eAPI transport protocol (default: https)",
+      "enum": ["http", "https"],
+      "default": "https"
+    },
+    "port": {
+      "type": "integer",
+      "description": "eAPI port number (default: 443)",
+      "default": 443,
+      "minimum": 1,
+      "maximum": 65535
+    },
+    "threshold": {
+      "type": "integer",
+      "description": "Port utilization threshold percentage to highlight (default: 70)",
+      "default": 70,
+      "minimum": 1,
+      "maximum": 100
+    }
+  },
+  "required": [
+    "host",
+    "username",
+    "password"
+  ],
+  "additionalProperties": false
+}
