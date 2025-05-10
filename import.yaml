@@ -55,41 +55,6 @@ decorators:
             - deviceName
             - vlan_id
         type: object
-    - name: dns-domain-checker-decorator
-      schema:
-        $id: root
-        $schema: http://json-schema.org/draft-07/schema#
-        additionalProperties: false
-        properties:
-            hostname:
-                description: The hostname to check for DNS record existence
-                format: hostname
-                type: string
-        required:
-            - hostname
-        type: object
-    - name: ios-interface-description-decorator
-      schema:
-        $id: root
-        $schema: http://json-schema.org/draft-07/schema#
-        additionalProperties: false
-        properties:
-            description:
-                type: string
-            deviceName:
-                type: string
-            interface:
-                description: Full interface identifier (e.g., GigabitEthernet1)
-                pattern: ^(Ethernet|FastEthernet|GigabitEthernet)\d+$
-                type: string
-            subinterface:
-                type: string
-        required:
-            - deviceName
-            - interface
-            - subinterface
-            - description
-        type: object
     - name: juniper-junos-ospf-status-decorator
       schema:
         $id: root
@@ -184,18 +149,6 @@ services:
         inventory:
             - inventory.yaml
         config-file: ansible.cfg
-    - name: ios-interface-description
-      type: ansible-playbook
-      description: Ansible playbook that configures interface descriptions on IOS devices
-      playbooks:
-        - ios-interface-description.yaml
-      working-directory: playbooks
-      repository: autocon3-content
-      decorator: ios-interface-description-decorator
-      runtime:
-        inventory:
-            - inventory.yaml
-        config-file: ansible.cfg
     - name: arista-eos-port-utilization
       type: python-script
       description: Python script that checks port utilization on Arista EOS devices
@@ -210,13 +163,6 @@ services:
       working-directory: scripts/cisco-ios-xe-bgp-status
       repository: autocon3-content
       decorator: cisco-ios-xe-bgp-status-decorator
-    - name: dns-domain-checker
-      type: python-script
-      description: Python script that checks DNS domain records
-      filename: dns-domain-checker.py
-      working-directory: scripts/dns-domain-checker
-      repository: autocon3-content
-      decorator: dns-domain-checker-decorator
     - name: juniper-junos-ospf-status
       type: python-script
       description: Python script that checks OSPF status on Juniper Junos devices
