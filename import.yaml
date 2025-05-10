@@ -55,6 +55,41 @@ decorators:
             - deviceName
             - vlan_id
         type: object
+    - name: dns-domain-checker-decorator
+      schema:
+        $id: root
+        $schema: http://json-schema.org/draft-07/schema#
+        additionalProperties: false
+        properties:
+            hostname:
+                description: The hostname to check for DNS record existence
+                format: hostname
+                type: string
+        required:
+            - hostname
+        type: object
+    - name: ios-interface-description-decorator
+      schema:
+        $id: root
+        $schema: http://json-schema.org/draft-07/schema#
+        additionalProperties: false
+        properties:
+            description:
+                type: string
+            deviceName:
+                type: string
+            interface:
+                description: Full interface identifier (e.g., GigabitEthernet1)
+                pattern: ^(Ethernet|FastEthernet|GigabitEthernet)\d+$
+                type: string
+            subinterface:
+                type: string
+        required:
+            - deviceName
+            - interface
+            - subinterface
+            - description
+        type: object
     - name: juniper-junos-ospf-status-decorator
       schema:
         $id: root
